@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "lfconnect-dev",
+    "staging": "lfconnect-vtqa",
+    "production": "api-project-687189261995"
+  }
+}

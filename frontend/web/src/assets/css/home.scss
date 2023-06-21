@@ -1,0 +1,48 @@
+#Home {
+  padding-bottom: 100px;
+
+  p.home-text {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    font-weight: 400;
+  }
+
+  .App-header {
+    background-color: $profile-bgcolor;
+    min-height: auto;
+    margin: 10px auto;
+
+    &.small {
+      width: 339px;
+      height: 307px;
+
+      img {
+        width: 225px;
+      }
+    }
+
+    ~ button.btn.btn-secondary {
+      color: $primary-text;
+      border-radius: 8px;
+      box-shadow: 0px 1px 6px rgba(52, 48, 62, 0.1);
+      padding: 15px;
+      margin-bottom: 25px;
+    }
+
+    ~ button:hover {
+      background-color: $primary-btn-bgcolor !important;
+    }
+
+    @media screen and (min-width: 540px) {
+      width: 480px;
+    }
+
+    @media screen and (max-width: 375px) {
+      // custom CSS
+      img {
+        width: 235px;
+      }
+    }
+  }
+}

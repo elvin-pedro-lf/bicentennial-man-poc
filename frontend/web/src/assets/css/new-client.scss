@@ -1,0 +1,144 @@
+#new-client {
+  padding-bottom: 100px;
+
+  #coach-faq {
+    text-align: left;
+    width: 85%;
+    margin: 20px auto;
+    @media screen and (min-width: 900px) {
+      width: 40%;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    p.subGroup {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+    textarea {
+      height: 150px;
+      padding: 1rem;
+    }
+
+    .btn-group {
+      display: block;
+
+      label {
+        &.btn.btn-primary {
+          margin-top: 10px;
+          margin-left: 5px;
+          margin-bottom: 10px;
+          width: auto;
+          padding: 6px 10px;
+          font-size: 14px;
+
+          &.btn-inactive {
+            white-space: nowrap;
+            border-radius: 30px;
+            color: $primary-btn-color-inactive;
+          }
+        }
+
+        @media screen and (max-width: 390px) {
+          // custom CSS
+          &.btn.btn-primary {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .btn-check:checked + label.btn.btn-primary {
+        color: #fff;
+        border-color: $primary-btn-bgcolor;
+        background-color: $primary-btn-bgcolor;
+      }
+    }
+  }
+
+  .display-prompt {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 85%;
+    text-align: left;
+  }
+
+  #new-client-plan {
+    width: 90%;
+    margin: 20px auto;
+    text-align: left;
+    white-space: pre-line;
+    @media screen and (min-width: 900px) {
+      width: 40%;
+    }
+
+    table {
+      border: 1px solid #f1f1f1;
+
+      tr {
+        th {
+          background-color: $primary-color;
+          color: #fff;
+          font-weight: 700;
+          text-align: left;
+          vertical-align: top;
+          padding: 10px;
+        }
+
+        td {
+          text-align: left;
+          vertical-align: top;
+          padding: 10px;
+        }
+
+        td:last-child {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  #makeAdjustments {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    @media screen and (min-width: 900px) {
+      width: 40%;
+    }
+
+    textarea {
+      height: 365px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 10px;
+      border-color: #d1d3d4;
+      padding: 1rem;
+
+      &:focus,
+      &:active {
+        border-color: #d1d3d4 !important;
+        background-color: #d1d3d4;
+      }
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  #adjust-plan {
+    font-weight: 700;
+  }
+
+  .btn.btn-primary.btn-inactive {
+    @include button-primary;
+    @include button-inactive;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "name": "dev"
+  },
+  "lfconnect": {
+    "optimus_base_url": "https://qa1.lfconnect.com/services/"
+  },
+  "cron": {
+    "key": "77df1554c6e2ed44dd55fe7131cbcd22f42eaffb"
+  }
+}

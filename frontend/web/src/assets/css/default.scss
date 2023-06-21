@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+$primary-color: #d11f2e;
+$primary-text: #000;
+$primary-font-stack: Roboto, sans-serif;
+
+$primary-btn-bgcolor: #d11f2e;
+$primary-btn-bgcolor-inactive: #d9d9d9;
+$primary-btn-color-inactive: #444;
+
+$primary-checkbox-button-group: #ac1b28;
+
+$profile-bgcolor: #d9d9d9;
+
+@mixin button-primary {
+  width: 90%;
+  border-color: $primary-btn-bgcolor;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-size: 18px;
+}
+
+@mixin button-inactive {
+  background-color: $primary-btn-bgcolor-inactive;
+  border-color: $primary-btn-bgcolor-inactive;
+}
+
+@mixin text-highlighted {
+  color: $primary-color;
+  text-decoration: none;
+  font-family: $primary-font-stack;
+}
+
+#root {
+  .App {
+    font-family: $primary-font-stack;
+    color: $primary-text;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      @include text-highlighted;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.1rem;
+    }
+
+    h1 {
+      text-align: left;
+      margin-bottom: 0;
+      @media screen and (min-width: 540px) {
+        text-align: center;
+      }
+
+      .header {
+        font-family: $primary-font-stack;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 33px;
+        color: #000;
+        text-align: left !important;
+        padding: 20px 0 20px 17px;
+        display: inline-block;
+      }
+    }
+
+    strong {
+      &.error-message {
+        color: #d11f2e;
+        text-align: center;
+        display: inline-block;
+        margin: 20px auto;
+      }
+    }
+
+    .navbar {
+      padding-top: 2px;
+      padding-bottom: 2px;
+
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+      }
+
+      .navbar-nav {
+        width: 100%;
+      }
+
+      .nav-link {
+        width: 25%;
+        background-color: #fff;
+      }
+
+      .nav-link,
+      .navbar-brand {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+          @include text-highlighted;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    .btn.btn-primary {
+      @include button-primary;
+      background-color: $primary-btn-bgcolor;
+    }
+
+    .btn.btn-secondary {
+      @include button-primary;
+      background-color: #fff;
+      border-color: #fff;
+      color: $primary-color;
+    }
+
+    #coach-thumbnail {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: $profile-bgcolor;
+
+      img {
+        position: relative;
+        top: -25px !important;
+      }
+    }
+
+    #pageLoading {
+      margin-top: 20px;
+      color: $primary-color;
+      font-weight: 700;
+      text-align: center;
+
+      div#ChatGPTPrompt {
+        text-align: left;
+        color: $primary-text;
+        font-size: 12px;
+      }
+
+      div#loader {
+        margin: 20px auto;
+        width: fit-content;
+        display: block;
+      }
+    }
+
+    @import "./home.scss";
+
+    @import "./new-client.scss";
+
+    @import "./history.scss";
+
+    @import "./my-workouts.scss";
+
+    @media screen and (min-width: 900px) {
+      .btn.btn-primary,
+      .btn.btn-secondary {
+        width: auto !important;
+      }
+    }
+  }
+}
